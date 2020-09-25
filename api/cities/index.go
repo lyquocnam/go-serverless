@@ -1,4 +1,4 @@
-package api
+package cities
 
 import (
 	"encoding/json"
@@ -8,6 +8,8 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
+	// connect db get
+	// defer close
 	currentTime := time.Now().Format(time.RFC850)
 	fmt.Fprintf(w, currentTime)
 
